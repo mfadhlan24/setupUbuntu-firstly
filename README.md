@@ -41,17 +41,9 @@ The script will guide you through the process of generating a GPG key if you don
 - Ensure you have the necessary permissions to run the script.
 - The script requires user interaction for GPG key generation.
 
-## 🖼️ Screenshots
-
-![Terminal Screenshot](https://via.placeholder.com/800x400.png?text=Ubuntu+Setup+Script+Running)
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 💬 Feedback
 
-If you have any feedback, please reach out to us at [your-email@example.com](mailto:your-email@example.com).
+If you have any feedback, please reach out to us at [admin@lanzzstore.com](mailto:admin@lanzzstore.com).
 
 ---
 
