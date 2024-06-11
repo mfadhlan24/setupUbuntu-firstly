@@ -36,13 +36,27 @@ gpg --full-gen-key
 echo "Please complete the GPG key generation process."
 read -p "Press Enter to continue once you have completed the GPG key generation..." temp
 
-# Retrieve the fingerprint of the most recently created GPG key
-GPG_KEY=$(gpg --list-keys --with-colons | grep 'fpr' | tail -1 | cut -d ':' -f 10)
-echo "Using GPG key fingerprint: $GPG_KEY"
+# Prompt user to enter the fingerprint of the generated GPG key
+read -p "Enter the fingerprint of your generated GPG key: " GPG_KEY
 
 # Initialize pass with the specific GPG key
 echo "Initializing pass with the GPG key..."
 pass init $GPG_KEY
+
+# Prompt user to enter GitHub credentials
+echo "Please enter your GitHub credentials."
+read -p "GitHub Username: " github_user
+read -sp "GitHub Password: " github_password
+echo
+
+# Store GitHub credentials in pass
+echo "Storing GitHub credentials in pass..."
+pass insert github.com << EOF
+$github_password
+user:$github_user
+protocol:https
+host:github.com
+EOF
 
 # Install nvm
 echo "Installing nvm..."
