@@ -68,12 +68,20 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# List remote Node.js versions
-echo "Listing remote Node.js versions..."
-nvm list-remote
-
 # Install the stable version of Node.js
 echo "Installing the stable version of Node.js..."
 nvm install stable
+
+# Set the stable version as the default version
+echo "Setting the stable version as the default version..."
+nvm alias default stable
+
+# Load the stable version into the current shell session
+echo "Loading the stable version into the current shell session..."
+nvm use stable
+
+# Verify Node.js installation
+echo "Node.js version:"
+node -v
 
 echo "Setup is complete!"
