@@ -26,6 +26,7 @@ This script automates the setup process for an Ubuntu system, including the inst
 
 3. **Make the script executable by running:**
     ```bash
+    wget https://raw.githubusercontent.com/mfadhlan24/setupUbuntu-firstly/main/setup-ubuntu.sh
     chmod +x setup-ubuntu.sh
     ```
 
