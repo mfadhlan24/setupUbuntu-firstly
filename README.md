@@ -34,6 +34,10 @@ This script automates the setup process for an Ubuntu system, including the inst
     ```bash
     ./setup-ubuntu.sh
     ```
+5. **If u FOUND node is not installer after "node -v" u can paste code bellow on terminal :***
+```bash
+
+```
 
 The script will guide you through the process of generating a GPG key if you don't already have one. Once the setup is complete, you'll have a fully configured Ubuntu environment ready for development.
 
