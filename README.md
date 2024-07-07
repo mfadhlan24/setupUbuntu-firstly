@@ -36,8 +36,14 @@ This script automates the setup process for an Ubuntu system, including the inst
     ```
 5. **If u FOUND node is not installer after "node -v" u can paste code bellow on terminal :***
 ```bash
-
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Ini akan me-load nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Ini akan me-load nvm bash_completion
+source ~/.bashrc
+nvm use stable
+node -v
 ```
+then "node -v" again.
 
 The script will guide you through the process of generating a GPG key if you don't already have one. Once the setup is complete, you'll have a fully configured Ubuntu environment ready for development.
 
